@@ -132,21 +132,26 @@
             backdrop-filter: blur(5px);
         }
 
-        /* TEXTO BASE PARA LAS TARJETAS */
+        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (IGUAL A LA REFERENCIA) */
         .card-text {
             color: #ffffff;
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 20px; /* Un toque más grande para que luzca el contorno */
+            font-weight: 700;
             z-index: 2;
             text-align: center;
             width: 100%;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-        }
-
-        /* EFECTO INSTAGRAM: BORDE ULTRA DELGADO Y SUTIL SÓLO PARA EXCLUSIVE CONTENT */
-        .exclusive-text {
-            -webkit-text-stroke: 0.5px #000000;
-            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+            letter-spacing: 0.3px;
+            /* Creación del contorno exterior limpio usando sombras en todas las direcciones */
+            text-shadow: 
+                -2px -2px 0 #000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000,
+                -2px  0px 0 #000,
+                 2px  0px 0 #000,
+                 0px -2px 0 #000,
+                 0px  2px 0 #000,
+                 0px  3px 6px rgba(0,0,0,0.5); /* Sombra suave para dar profundidad */
         }
 
         .long-button {
@@ -205,9 +210,9 @@
         <!-- Fila de Logos independientes -->
         <div class="social-icons-row">
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
         <div class="bio-text">Beyond imagination</div>
@@ -215,32 +220,32 @@
         <!-- Enlaces -->
         <div class="content-links">
             
-            <!-- Tarjeta 1: YouTube (Queda intacta) -->
+            <!-- Tarjeta 1: YouTube -->
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('youtube_card.jpeg');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-brands fa-youtube"></i></div>
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Sólo esta cambia con el borde sutil) -->
+            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
-                <div class="card-text exclusive-text">Exclusive Content</div>
+                <div class="card-text">Exclusive Content</div>
             </a>
 
             <!-- Botón: Instagram -->
-            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
                 <span class="btn-label">Instagram</span>
             </a>
 
             <!-- Botón: TikTok -->
-            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
                 <span class="btn-label">TikTok</span>
             </a>
 
             <!-- Botón: X -->
-            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
                 <span class="btn-label">X</span>
             </a>
