@@ -132,6 +132,7 @@
             backdrop-filter: blur(5px);
         }
 
+        /* TEXTO DE LAS TARJETAS (REVERTIDO AL ESTADO PERFECTO ANTERIOR) */
         .card-text {
             color: #ffffff;
             font-size: 18px;
@@ -142,16 +143,17 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
 
+        /* EFECTO INSTAGRAM ULTRA DELGADO (REVERTIDO AL ESTADO PERFECTO ANTERIOR) */
         .exclusive-text {
             -webkit-text-stroke: 0.5px #000000;
             text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
         }
 
-        /* NUEVO ESTILO HOMOGÉNEO PARA LAS BARRAS: RECTÁNGULOS CON BORDES REDONDEADOS */
+        /* CORREGIDO: BARRAS RECTANGULARES CON ESQUINAS REDONDEADAS (HOMOGÉNEAS CON LAS FOTOS) */
         .long-button {
             width: 100%;
             height: 56px;
-            border-radius: 20px; /* Igual al borde de tus tarjetas de imagen */
+            border-radius: 20px; /* Rectángulo con esquinas redondeadas en lugar de extremos circulares */
             background: linear-gradient(90deg, #ffffff 0%, #1a1e29 35%, #0d1017 100%);
             display: flex;
             align-items: center;
@@ -168,7 +170,6 @@
             transform: scale(0.98);
         }
 
-        /* CÍRCULO NEGRO PARA TODOS LOS ICONOS INTERNOS */
         .btn-icon-circle {
             width: 44px;
             height: 44px;
@@ -176,9 +177,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px; /* Ajuste general de tamaño */
             color: white;
-            background: #000000; /* Fondo negro homogéneo para todos */
+        }
+
+        /* CORREGIDO: INSTAGRAM AHORA TIENE CÍRCULO NEGRO Y EL LOGO ES MÁS GRANDE */
+        .btn-ic-instagram { 
+            background: #000000; 
+            font-size: 22px; 
+        }
+        
+        .btn-ic-tiktok { 
+            background: #000000; 
+            font-size: 18px; 
+        }
+        
+        .btn-ic-x { 
+            background: #000000; 
+            font-size: 18px; 
         }
 
         .btn-label {
@@ -224,21 +239,21 @@
                 <div class="card-text exclusive-text">Exclusive Content</div>
             </a>
 
-            <!-- Botón Rectangular: Instagram con círculo negro -->
+            <!-- Botón Rectangular: Instagram (Con círculo negro e icono agrandado) -->
             <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle"><i class="fa-brands fa-instagram"></i></div>
+                <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
                 <span class="btn-label">Instagram</span>
             </a>
 
             <!-- Botón Rectangular: TikTok -->
             <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
                 <span class="btn-label">TikTok</span>
             </a>
 
             <!-- Botón Rectangular: X -->
             <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
                 <span class="btn-label">X</span>
             </a>
 
