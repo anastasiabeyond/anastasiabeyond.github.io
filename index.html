@@ -133,7 +133,7 @@
             backdrop-filter: blur(5px);
         }
 
-        /* INTACTO - TEXTO CON BORDE EXTERIOR ESTILO STICKER PARA AMBAS TARJETAS */
+        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (INTACTO - IDÉNTICO PARA AMBAS TARJETAS) */
         .card-text {
             color: #ffffff;
             font-size: 20px;
@@ -154,7 +154,7 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* MODIFICADO ÚNICAMENTE: ILUMINACIÓN TRASERA MÁS NOTORIA EN BLANCO/GRIS CLARO */
+        /* CORREGIDO ÚNICAMENTE: ILUMINACIÓN EN BLANCO NEÓN DEFINIDO PARA DESTACAR */
         .long-button {
             width: 100%;
             height: 56px;
@@ -169,13 +169,13 @@
             font-size: 15px;
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
-            /* Resplandor intensificado y mucho más visible para dar el efecto premium deseado */
-            box-shadow: 0 0 22px rgba(255, 255, 255, 0.45); 
+            /* Resplandor blanco puro translúcido concentrado */
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.4); 
         }
 
         .long-button:active {
             transform: scale(0.98);
-            box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
         }
 
         .btn-icon-circle {
@@ -216,13 +216,11 @@
 
     <div class="container">
         
-        <!-- Foto principal -->
         <div class="header-banner" style="background-image: url('anastasia_main.jpeg');">
             <h1 class="profile-name">Anastasia Beyond</h1>
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Fila de Logos independientes -->
         <div class="social-icons-row">
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
@@ -230,34 +228,28 @@
             <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
-        <!-- Enlaces -->
         <div class="content-links">
             
-            <!-- Tarjeta 1: YouTube -->
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('youtube_card.jpeg');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-brands fa-youtube"></i></div>
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
                 <div class="card-text">Exclusive Content</div>
             </a>
 
-            <!-- Botón: Instagram -->
             <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
                 <span class="btn-label">Instagram</span>
             </a>
 
-            <!-- Botón: TikTok -->
             <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
                 <span class="btn-label">TikTok</span>
             </a>
 
-            <!-- Botón: X -->
             <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
                 <span class="btn-label">X</span>
