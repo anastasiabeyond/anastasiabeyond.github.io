@@ -133,7 +133,7 @@
             backdrop-filter: blur(5px);
         }
 
-        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (IDÉNTICO PARA AMBAS TARJETAS) */
+        /* INTACTO - TEXTO CON BORDE EXTERIOR ESTILO STICKER PARA AMBAS TARJETAS */
         .card-text {
             color: #ffffff;
             font-size: 20px;
@@ -154,7 +154,7 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* BARRAS TOTALMENTE NEGRAS CON EFECTO HALO DE ILUMINACIÓN TRASERA */
+        /* MODIFICADO ÚNICAMENTE: ILUMINACIÓN TRASERA MÁS NOTORIA EN BLANCO/GRIS CLARO */
         .long-button {
             width: 100%;
             height: 56px;
@@ -169,12 +169,13 @@
             font-size: 15px;
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.25); 
+            /* Resplandor intensificado y mucho más visible para dar el efecto premium deseado */
+            box-shadow: 0 0 22px rgba(255, 255, 255, 0.45); 
         }
 
         .long-button:active {
             transform: scale(0.98);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
         }
 
         .btn-icon-circle {
@@ -238,7 +239,7 @@
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) - Corregido para que use exactamente la misma clase -->
+            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
                 <div class="card-text">Exclusive Content</div>
