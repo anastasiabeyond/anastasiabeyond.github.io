@@ -132,17 +132,26 @@
             backdrop-filter: blur(5px);
         }
 
-        /* TEXTO CON BORDE NEGRO INTEGRADO PARA LEGIBILIDAD ABSOLUTA */
+        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (IGUAL A LA REFERENCIA) */
         .card-text {
             color: #ffffff;
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 20px; /* Un toque más grande para que luzca el contorno */
+            font-weight: 700;
             z-index: 2;
             text-align: center;
             width: 100%;
-            /* Borde negro alrededor de cada letra para contrastar con fondos claros */
-            -webkit-text-stroke: 1.5px #000000;
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
+            letter-spacing: 0.3px;
+            /* Creación del contorno exterior limpio usando sombras en todas las direcciones */
+            text-shadow: 
+                -2px -2px 0 #000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000,
+                -2px  0px 0 #000,
+                 2px  0px 0 #000,
+                 0px -2px 0 #000,
+                 0px  2px 0 #000,
+                 0px  3px 6px rgba(0,0,0,0.5); /* Sombra suave para dar profundidad */
         }
 
         .long-button {
@@ -201,7 +210,7 @@
         <!-- Fila de Logos independientes -->
         <div class="social-icons-row">
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://instagram.com/anastasiabeyornd1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
@@ -218,7 +227,6 @@
             </a>
 
             <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
-            <!-- Agregado el "?v=2" al final de la imagen para forzar a Cloudflare a actualizarla de golpe -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
                 <div class="card-text">Exclusive Content</div>
