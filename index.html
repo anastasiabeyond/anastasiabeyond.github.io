@@ -43,24 +43,7 @@
             text-align: center;
             padding: 20px;
             position: relative;
-            border-radius: 20px 20px 0 0; /* Suaviza las esquinas superiores */
-        }
-
-        .user-icon-top {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            padding: 8px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            z-index: 10;
+            border-radius: 20px; /* Redondea todas las esquinas de la foto */
         }
 
         .profile-name {
@@ -75,20 +58,19 @@
         .profile-username {
             font-size: 15px;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-shadow: 0px 1px 5px rgba(0,0,0,0.9);
             z-index: 2;
             font-weight: 500;
         }
 
-        /* FILA SUPERIOR: ICONOS REDONDOS MONOCROMÁTICOS */
+        /* NUEVA UBICACIÓN: ICONOS FUERA DE LA FOTO, DEBAJO DE ELLA */
         .social-icons-row {
             display: flex;
             gap: 14px;
-            margin-bottom: 10px;
+            margin: 20px 0 5px 0; /* Espaciado equilibrado entre la foto y la frase */
             justify-content: center;
             width: 100%;
-            z-index: 2;
         }
 
         .icon-circle {
@@ -115,7 +97,7 @@
             font-size: 15px;
             color: #ffffff;
             text-align: center;
-            margin: 25px 0;
+            margin-bottom: 25px;
             font-weight: 300;
             letter-spacing: 0.5px;
         }
@@ -128,7 +110,6 @@
             width: 100%;
         }
 
-        /* TARJETAS DE IMAGEN - TOTALMENTE LIMPIAS SIN DIFUMINADO NEGRO */
         .image-card {
             width: 100%;
             height: 220px;
@@ -176,7 +157,6 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.9);
         }
 
-        /* BOTONES ALARGADOS ORIGINALES CON DEGRADADO METÁLICO */
         .long-button {
             width: 100%;
             height: 56px;
@@ -225,20 +205,18 @@
 
     <div class="container">
         
-        <div class="user-icon-top"><i class="fa-regular fa-user"></i></div>
-
-        <!-- Cabecera sin capas oscuras superpuestas -->
+        <!-- Foto principal completamente limpia de iconos y silueta superior -->
         <div class="header-banner" style="background-image: url('anastasia_main.jpeg');">
             <h1 class="profile-name">Anastasia Beyond</h1>
             <div class="profile-username">@anastasiabeyond1</div>
-            
-            <!-- Fila de Iconos Superiores Monocromáticos -->
-            <div class="social-icons-row">
-                <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
+        </div>
+
+        <!-- Fila de Iconos Centrados debajo de la foto y encima de la frase -->
+        <div class="social-icons-row">
+            <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-circle"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
         <div class="bio-text">Beyond imagination</div>
@@ -246,13 +224,13 @@
         <!-- Enlaces -->
         <div class="content-links">
             
-            <!-- Tarjeta 1: YouTube con Imagen Limpia -->
+            <!-- Tarjeta 1: YouTube -->
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('youtube_card.jpeg');">
                 <div class="card-badge" style="color: #FF0000;"><i class="fa-brands fa-youtube"></i></div>
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) con Imagen Limpia -->
+            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg');">
                 <div class="card-badge" style="color: #00aff0;"><i class="fa-solid fa-star"></i></div>
                 <div class="card-text">Exclusive Content</div>
