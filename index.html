@@ -41,7 +41,7 @@
             justify-content: flex-end;
             align-items: center;
             text-align: center;
-            padding: 25px 20px; /* Un poco más de espacio interno abajo */
+            padding: 25px 20px;
             position: relative;
             border-radius: 20px;
         }
@@ -49,13 +49,12 @@
         .profile-name {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 2px; /* Margen mínimo para que la frase quede justo debajo */
+            margin-bottom: 2px;
             letter-spacing: -0.5px;
             text-shadow: 0px 2px 10px rgba(0,0,0,0.9);
             z-index: 2;
         }
 
-        /* FRASE DENTRO DE LA FOTO PRINCIPAL */
         .profile-bio-inside {
             font-size: 15px;
             color: #ffffff;
@@ -69,7 +68,7 @@
         .social-icons-row {
             display: flex;
             gap: 24px;
-            margin: 25px 0 25px 0; /* Espaciado equilibrado ahora que la frase no está abajo */
+            margin: 25px 0 25px 0;
             justify-content: center;
             width: 100%;
         }
@@ -134,7 +133,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (TU FORMATO FAVORITO INTACTO) */
         .card-text {
             color: #ffffff;
             font-size: 20px;
@@ -155,12 +153,17 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* BARRAS RECTANGULARES CON ESQUINAS REDONDEADAS HOMOGÉNEAS INTACTAS */
+        .exclusive-text {
+            -webkit-text-stroke: 0.5px #000000;
+            text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* MODIFICADO: BARRAS TOTALMENTE NEGRAS CON EFECTO HALO DE ILUMINACIÓN TRASERA */
         .long-button {
             width: 100%;
             height: 56px;
             border-radius: 20px;
-            background: linear-gradient(90deg, #ffffff 0%, #1a1e29 35%, #0d1017 100%);
+            background: #000000; /* Negro puro absoluto */
             display: flex;
             align-items: center;
             padding: 4px 6px;
@@ -169,11 +172,14 @@
             font-weight: 500;
             font-size: 15px;
             position: relative;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* Efecto difuminado de iluminación idéntico a la referencia */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.25); 
         }
 
         .long-button:active {
             transform: scale(0.98);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
         }
 
         .btn-icon-circle {
@@ -186,7 +192,6 @@
             color: white;
         }
 
-        /* CONFIGURACIÓN DE LOS BOTONES INFERIORES INTACTAS */
         .btn-ic-instagram { 
             background: #000000; 
             font-size: 22px; 
@@ -215,7 +220,7 @@
 
     <div class="container">
         
-        <!-- Foto principal con el Nombre e instrucciones de Frase añadidas debajo -->
+        <!-- Foto principal limpia con frase debajo -->
         <div class="header-banner" style="background-image: url('anastasia_main.jpeg');">
             <h1 class="profile-name">Anastasia Beyond</h1>
             <div class="profile-bio-inside">Beyond imagination</div>
@@ -224,9 +229,9 @@
         <!-- Fila de Logos independientes -->
         <div class="social-icons-row">
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
         <!-- Enlaces -->
@@ -241,23 +246,23 @@
             <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
-                <div class="card-text">Exclusive Content</div>
+                <div class="card-text exclusive-text">Exclusive Content</div>
             </a>
 
             <!-- Botón: Instagram -->
-            <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
                 <span class="btn-label">Instagram</span>
             </a>
 
             <!-- Botón: TikTok -->
-            <a href="https://tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
                 <span class="btn-label">TikTok</span>
             </a>
 
             <!-- Botón: X -->
-            <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="long-button">
+            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
                 <span class="btn-label">X</span>
             </a>
