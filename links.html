@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anastasia Beyond | Links</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Anastasia Beyond | Official Site</title>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -20,177 +19,93 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            padding-top: 25px;
-            padding-bottom: 40px;
+            padding: 20px;
         }
 
         .container {
             width: 100%;
             max-width: 480px;
-            position: relative;
+            text-align: center;
         }
 
-        .content-links {
-            padding: 0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 100%;
+        /* TÍTULO PRINCIPAL SOBRE LA FOTO */
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            text-align: center;
         }
 
-        .image-card {
+        .header-banner {
             width: 100%;
-            height: 220px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
+            height: 380px; 
+            background-image: url('anastasia_main.jpeg');
             background-size: cover;
             background-position: center;
-            text-decoration: none;
             display: flex;
-            align-items: flex-end;
-            padding: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            transition: transform 0.2s;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 25px 20px;
+            position: relative;
+            border-radius: 20px;
+            margin-bottom: 40px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        .image-card:active {
-            transform: scale(0.98);
+        /* LEMA DENTRO DE LA FOTO EN LA PARTE INFERIOR */
+        .profile-bio-inside {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-shadow: 0px 1px 6px rgba(0,0,0,0.9);
+            z-index: 2;
         }
 
-        .card-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
+        /* BOTÓN DE ENTRADA CON ILUMINACIÓN BLANCA */
+        .main-entrance-button {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-        }
-
-        /* INTACTO - TEXTO CON BORDE EXTERIOR ESTILO STICKER PARA AMBAS TARJETAS */
-        .card-text {
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: 700;
-            z-index: 2;
-            text-align: center;
-            width: 100%;
-            letter-spacing: 0.3px;
-            text-shadow: 
-                -2px -2px 0 #000,  
-                 2px -2px 0 #000,
-                -2px  2px 0 #000,
-                 2px  2px 0 #000,
-                -2px  0px 0 #000,
-                 2px  0px 0 #000,
-                 0px -2px 0 #000,
-                 0px  2px 0 #000,
-                 0px  3px 6px rgba(0,0,0,0.5);
-        }
-
-        /* INTACTO - BARRAS TOTALMENTE NEGRAS CON ILUMINACIÓN BLANCA */
-        .long-button {
-            width: 100%;
-            height: 56px;
+            width: 85%;
+            height: 58px;
             border-radius: 20px;
             background: #000000;
-            display: flex;
-            align-items: center;
-            padding: 4px 6px;
+            color: #ffffff;
             text-decoration: none;
-            color: white;
-            font-weight: 500;
-            font-size: 15px;
-            position: relative;
+            font-weight: 600;
+            font-size: 17px;
+            letter-spacing: 0.5px;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 18px rgba(255, 255, 255, 0.4); 
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
         }
 
-        .long-button:active {
-            transform: scale(0.98);
+        .main-entrance-button:active {
+            transform: scale(0.97);
             box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
-        }
-
-        .btn-icon-circle {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .btn-ic-instagram { 
-            background: #000000; 
-            font-size: 22px; 
-        }
-        
-        .btn-ic-tiktok { 
-            background: #000000; 
-            font-size: 18px;
-        }
-        
-        .btn-ic-x { 
-            background: #000000; 
-            font-size: 18px;
-        }
-
-        .btn-label {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-weight: 500;
-            letter-spacing: 0.3px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        
+        <!-- Título posicionado arriba y fuera de la foto, centrado -->
+        <h1 class="page-title">Anastasia Beyond</h1>
 
-        <!-- Enlaces -->
-        <div class="content-links">
-            
-            <!-- Tarjeta 1: YouTube -->
-            <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('youtube_card.jpeg');">
-                <div class="card-badge" style="color: #ffffff;"><i class="fa-brands fa-youtube"></i></div>
-                <div class="card-text">YouTube</div>
-            </a>
-
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
-            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
-                <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
-                <div class="card-text">Exclusive Content</div>
-            </a>
-
-            <!-- Botón: Instagram -->
-            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
-                <span class="btn-label">Instagram</span>
-            </a>
-
-            <!-- Botón: TikTok -->
-            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
-                <span class="btn-label">TikTok</span>
-            </a>
-
-            <!-- Botón: X -->
-            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
-                <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
-                <span class="btn-label">X</span>
-            </a>
-
+        <!-- Foto principal solo con la frase "Beyond imagination" abajo -->
+        <div class="header-banner">
+            <div class="profile-bio-inside">Beyond imagination</div>
         </div>
+
+        <!-- Enlace hacia tu segunda página -->
+        <a href="links.html" class="main-entrance-button">
+            My Links
+        </a>
 
     </div>
 
