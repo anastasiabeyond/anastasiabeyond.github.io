@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia Beyond | Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 25px;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+        }
+
+        .content-links {
+            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .image-card {
+            width: 100%;
+            height: 220px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            transition: transform 0.2s;
+        }
+
+        .image-card:active {
+            transform: scale(0.98);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        /* INTACTO - TEXTO CON BORDE EXTERIOR ESTILO STICKER PARA AMBAS TARJETAS */
+        .card-text {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 0.3px;
+            text-shadow: 
+                -2px -2px 0 #000,  
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000,
+                -2px  0px 0 #000,
+                 2px  0px 0 #000,
+                 0px -2px 0 #000,
+                 0px  2px 0 #000,
+                 0px  3px 6px rgba(0,0,0,0.5);
+        }
+
+        /* INTACTO - BARRAS TOTALMENTE NEGRAS CON ILUMINACIÓN BLANCA */
+        .long-button {
+            width: 100%;
+            height: 56px;
+            border-radius: 20px;
+            background: #000000;
+            display: flex;
+            align-items: center;
+            padding: 4px 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.4); 
+        }
+
+        .long-button:active {
+            transform: scale(0.98);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-icon-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .btn-ic-instagram { 
+            background: #000000; 
+            font-size: 22px; 
+        }
+        
+        .btn-ic-tiktok { 
+            background: #000000; 
+            font-size: 18px;
+        }
+        
+        .btn-ic-x { 
+            background: #000000; 
+            font-size: 18px;
+        }
+
+        .btn-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Enlaces -->
+        <div class="content-links">
+            
+            <!-- Tarjeta 1: YouTube -->
+            <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('youtube_card.jpeg');">
+                <div class="card-badge" style="color: #ffffff;"><i class="fa-brands fa-youtube"></i></div>
+                <div class="card-text">YouTube</div>
+            </a>
+
+            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
+            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
+                <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
+                <div class="card-text">Exclusive Content</div>
+            </a>
+
+            <!-- Botón: Instagram -->
+            <a href="https://instagram.com/anastasibayeornd1" target="_blank" rel="noopener noreferrer" class="long-button">
+                <div class="btn-icon-circle btn-ic-instagram"><i class="fa-brands fa-instagram"></i></div>
+                <span class="btn-label">Instagram</span>
+            </a>
+
+            <!-- Botón: TikTok -->
+            <a href="https://tiktok.com/@anastasibayeond1" target="_blank" rel="noopener noreferrer" class="long-button">
+                <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
+                <span class="btn-label">TikTok</span>
+            </a>
+
+            <!-- Botón: X -->
+            <a href="https://x.com/anastasiabay1" target="_blank" rel="noopener noreferrer" class="long-button">
+                <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
+                <span class="btn-label">X</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
