@@ -30,9 +30,18 @@
             text-align: center;
         }
 
+        /* TÍTULO PRINCIPAL SOBRE LA FOTO */
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            text-align: center;
+        }
+
         .header-banner {
             width: 100%;
-            height: 420px; /* Un poco más alta para darle protagonismo exclusivo */
+            height: 380px; 
             background-image: url('anastasia_main.jpeg');
             background-size: cover;
             background-position: center;
@@ -40,22 +49,14 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
-            padding: 35px 20px;
+            padding: 25px 20px;
             position: relative;
             border-radius: 20px;
-            margin-bottom: 40px; /* Espacio elegante antes del botón */
+            margin-bottom: 40px; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        .profile-name {
-            font-size: 34px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            letter-spacing: -0.5px;
-            text-shadow: 0px 2px 10px rgba(0,0,0,0.9);
-            z-index: 2;
-        }
-
+        /* LEMA DENTRO DE LA FOTO EN LA PARTE INFERIOR */
         .profile-bio-inside {
             font-size: 16px;
             color: #ffffff;
@@ -65,7 +66,7 @@
             z-index: 2;
         }
 
-        /* BOTÓN DE ENTRADA PREMIUM CON ILUMINACIÓN BLANCA */
+        /* BOTÓN DE ENTRADA CON ILUMINACIÓN BLANCA */
         .main-entrance-button {
             display: inline-flex;
             align-items: center;
@@ -93,13 +94,15 @@
 
     <div class="container">
         
-        <!-- Tarjeta Principal con tu foto, nombre y frase interna -->
+        <!-- Título posicionado arriba y fuera de la foto, centrado -->
+        <h1 class="page-title">Anastasia Beyond</h1>
+
+        <!-- Foto principal solo con la frase "Beyond imagination" abajo -->
         <div class="header-banner">
-            <h1 class="profile-name">Anastasia Beyond</h1>
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Enlace hacia la subcarpeta /links -->
+        <!-- Enlace hacia tu segunda página -->
         <a href="links.html" class="main-entrance-button">
             My Links
         </a>
