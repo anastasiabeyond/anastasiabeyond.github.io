@@ -28,13 +28,15 @@
             width: 100%;
             max-width: 480px;
             text-align: center;
+            /* Subimos ligeramente todo el bloque para que el título se vea más arriba y centrado */
+            margin-top: -30px; 
         }
 
         /* TÍTULO PRINCIPAL SOBRE LA FOTO */
         .page-title {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 25px; /* Distancia perfecta hacia la foto */
             letter-spacing: -0.5px;
             text-align: center;
         }
@@ -52,7 +54,8 @@
             padding: 25px 20px;
             position: relative;
             border-radius: 20px;
-            margin-bottom: 40px; 
+            /* MODIFICADO: Misma distancia exacta (25px) hacia el botón de abajo para simetría pura */
+            margin-bottom: 25px; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
@@ -102,7 +105,7 @@
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Enlace hacia tu segunda página -->
+        <!-- Enlace hacia tu segunda página (Apuntando correctamente a aboutme.html) -->
         <a href="aboutme.html" class="main-entrance-button">
             My Links
         </a>
