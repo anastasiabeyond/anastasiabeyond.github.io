@@ -24,23 +24,28 @@
             padding: 20px;
         }
 
+        /* CONTENEDOR FLUIDO CON DISTRIBUCIÓN EQUIDISTANTE ESTRICTA */
         .container {
             width: 100%;
             max-width: 480px;
-            text-align: center;
-            /* Subimos ligeramente todo el bloque para que el título se vea más arriba y centrado */
-            margin-top: -30px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* Separa el título de la foto y la foto del botón exactamente con la misma distancia */
+            gap: 35px; 
         }
 
-        /* TÍTULO PRINCIPAL SOBRE LA FOTO */
+        /* TÍTULO PRINCIPAL */
         .page-title {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 25px; /* Distancia perfecta hacia la foto */
             letter-spacing: -0.5px;
             text-align: center;
+            width: 100%;
         }
 
+        /* FOTO CENTRAL PRINCIPAL */
         .header-banner {
             width: 100%;
             height: 380px; 
@@ -54,12 +59,10 @@
             padding: 25px 20px;
             position: relative;
             border-radius: 20px;
-            /* MODIFICADO: Misma distancia exacta (25px) hacia el botón de abajo para simetría pura */
-            margin-bottom: 25px; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        /* LEMA DENTRO DE LA FOTO EN LA PARTE INFERIOR */
+        /* LEMA DENTRO DE LA FOTO */
         .profile-bio-inside {
             font-size: 16px;
             color: #ffffff;
@@ -97,15 +100,15 @@
 
     <div class="container">
         
-        <!-- Título posicionado arriba y fuera de la foto, centrado -->
+        <!-- Título principal -->
         <h1 class="page-title">Anastasia Beyond</h1>
 
-        <!-- Foto principal solo con la frase "Beyond imagination" abajo -->
+        <!-- Foto principal -->
         <div class="header-banner">
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Enlace hacia tu segunda página (Apuntando correctamente a aboutme.html) -->
+        <!-- Botón de acceso directo a sobre mí -->
         <a href="aboutme.html" class="main-entrance-button">
             My Links
         </a>
