@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anastasia Beyond | Official Site</title>
     <style>
+        /* RESET BÁSICO PARA EVITAR MÁRGENES EXTRAÑOS */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -20,29 +21,27 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            min-height: 100vh; /* Ocupa todo el alto de la pantalla */
             padding: 20px;
         }
 
-        /* CONTENEDOR FLUIDO CON DISTRIBUCIÓN EQUIDISTANTE ESTRICTA */
         .container {
             width: 100%;
             max-width: 480px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            /* Separa el título de la foto y la foto del botón exactamente con la misma distancia */
-            gap: 35px; 
+            text-align: center;
+            /* Flexbox se encargará de centrar todo el bloque verticalmente */
         }
 
-        /* TÍTULO PRINCIPAL */
+        /* TÍTULO PRINCIPAL: EMPUJADO HACIA ARRIBA */
         .page-title {
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            text-align: center;
-            width: 100%;
+            margin-bottom: 50px; /* Separación drástica hacia la foto para subir el título */
+            margin-top: -20px; /* Empujoncito extra hacia arriba */
         }
 
         /* FOTO CENTRAL PRINCIPAL */
@@ -60,9 +59,12 @@
             position: relative;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            
+            /* MODIFICADO: Separación drástica e idéntica hacia el botón para equidistancia */
+            margin-bottom: 50px; 
         }
 
-        /* LEMA DENTRO DE LA FOTO */
+        /* LEMA DENTRO DE LA FOTO EN LA PARTE INFERIOR */
         .profile-bio-inside {
             font-size: 16px;
             color: #ffffff;
@@ -88,6 +90,9 @@
             letter-spacing: 0.5px;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
+            
+            /* MODIFICADO: Añadimos un margen inferior para que el botón no quede pegado al borde de la pantalla */
+            margin-bottom: 20px; 
         }
 
         .main-entrance-button:active {
@@ -100,15 +105,15 @@
 
     <div class="container">
         
-        <!-- Título principal -->
+        <!-- Título principal: Sube -->
         <h1 class="page-title">Anastasia Beyond</h1>
 
-        <!-- Foto principal -->
+        <!-- Foto principal: Queda en el centro -->
         <div class="header-banner">
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Botón de acceso directo a sobre mí -->
+        <!-- Botón de acceso: Baja -->
         <a href="aboutme.html" class="main-entrance-button">
             My Links
         </a>
