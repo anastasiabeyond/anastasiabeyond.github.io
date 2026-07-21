@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anastasia Beyond | Página Principal</title>
+    <title>Anastasia Beyond | Official Site</title>
     <style>
         /* RESET BÁSICO */
         *, *::before, *::after {
@@ -22,19 +22,19 @@
             justify-content: center;
             min-height: 100vh;
             padding: 20px;
-            overflow: hidden; /* Para que el efecto de partículas no cree barras de desplazamiento */
-            position: relative; /* Base para el posicionamiento de fondo */
+            overflow: hidden;
+            position: relative;
 
-            /* NUEVO FONDO: Degradado oscuro con textura, basado en la foto */
-            background: #000000; /* Fondo base negro */
+            /* FONDO DEGRADADO ORIGINAL */
+            background: #000000;
             background-image: 
-                radial-gradient(circle at 50% 50%, rgba(30, 10, 40, 0.7) 0%, rgba(0, 0, 0, 1) 100%), /* Degradado púrpura central sutil */
-                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgAInAzMAAVMDIABVjYAAA7gYFAm7v0X0AAAAASUVORK5CYII='); /* Patrón de textura de puntos muy sutil (reemplazable por imagen real) */
+                radial-gradient(circle at 50% 50%, rgba(30, 10, 40, 0.7) 0%, rgba(0, 0, 0, 1) 100%),
+                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgAInAzMAAVMDIABVjYAAA7gYFAm7v0X0AAAAASUVORK5CYII=');
             background-size: cover, auto;
             background-repeat: no-repeat, repeat;
         }
 
-        /* EFECTO DE ESTRELLAS/LUCES EN EL FONDO (PARTÍCULAS CSS) */
+        /* EFECTO DE ESTRELLAS/LUCES EN EL FONDO (MANTENIDO IGUAL) */
         .stars {
             position: absolute;
             width: 1px;
@@ -46,8 +46,9 @@
                 15vw 15vh #fff, 45vw 25vh 1px #fff, 65vw 85vh 2px #fff,
                 5vw 80vh #fff, 35vw 95vh 1px #fff, 55vw 55vh 2px #fff;
             animation: animateStars 100s linear infinite;
-            opacity: 0.5; /* Sutil */
+            opacity: 0.5;
         }
+
         .stars::after {
             content: " ";
             position: absolute;
@@ -67,7 +68,7 @@
             to { transform: translateY(-2000px); }
         }
 
-        /* LUCES PÚRPURAS/DORADAS SUTILES (RESPLANDOR DE FONDO) */
+        /* LUCES PÚRPURAS/DORADAS DE FONDO (MANTENIDAS IGUAL) */
         .bg-glow {
             position: absolute;
             width: 300px;
@@ -99,34 +100,31 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            /* Flexbox se encargará de centrar todo el bloque verticalmente */
-            position: relative; /* Para el rayo absoluto */
+            position: relative;
         }
 
-        /* TÍTULO PRINCIPAL: Mantiene posición y estilo, pero con sombra de luz */
+        /* TÍTULO PRINCIPAL: SUBIDO UN POCO PARA DAR MÁS ESPACIO */
         .page-title {
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            margin-bottom: 50px; 
-            margin-top: -20px; 
-            color: #d8baff; /* Color de letra púrpura muy claro, como en la foto */
-            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5); /* Sombra de luz púrpura sutil */
+            margin-top: -30px; /* Sube el título para que no se vea apretado */
+            margin-bottom: 0;
+            color: #d8baff;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
 
-        /* EFECTO DE RAYO / DESTELLO LUMINOSO DEBAJO DEL NOMBRE */
+        /* RAYO DE LUZ: MOVIDO JUSTO AL MEDIO ENTRE EL TÍTULO Y LA FOTO */
         .beam {
-            position: absolute;
             width: 100%;
             height: 2px;
             background: linear-gradient(90deg, rgba(138, 43, 226, 0) 0%, rgba(138, 43, 226, 1) 50%, rgba(138, 43, 226, 0) 100%);
-            top: -25px; /* Justo debajo del título */
-            left: 0;
+            margin-top: 20px; /* Espacio desde el título */
+            margin-bottom: 35px; /* Espacio hacia la foto principal */
             box-shadow: 0 0 15px 3px rgba(138, 43, 226, 0.8);
-            z-index: 1; /* Por encima de la foto pero debajo del texto */
         }
 
-        /* FOTO CENTRAL PRINCIPAL (MANTIENE DIMENSIONES Y CONTENIDO) */
+        /* FOTO CENTRAL PRINCIPAL */
         .header-banner {
             width: 100%;
             height: 380px; 
@@ -141,7 +139,7 @@
             position: relative;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-            margin-bottom: 50px; 
+            margin-bottom: 40px; 
         }
 
         /* LEMA DENTRO DE LA FOTO EN LA PARTE INFERIOR */
@@ -154,7 +152,7 @@
             z-index: 2;
         }
 
-        /* BOTÓN DE ENTRADA CON ILUMINACIÓN BLANCA INTENSA Y BORDE LUMINOSO, COMO EN LA FOTO */
+        /* BOTÓN DE ENTRADA (INTACTO) */
         .main-entrance-button {
             display: inline-flex;
             align-items: center;
@@ -170,12 +168,10 @@
             letter-spacing: 0.5px;
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
             margin-bottom: 20px; 
-            border: 2px solid #8e5bd9; /* Borde púrpura/dorado sutil */
-            
-            /* MODIFICADO: Sombra de luz blanca/púrpura intensa y definida para equidistancia y estética */
+            border: 2px solid #8e5bd9;
             box-shadow: 
-                0 0 25px rgba(255, 255, 255, 0.5), /* Resplandor blanco central */
-                0 0 15px rgba(138, 43, 226, 0.7); /* Resplandor púrpura exterior */
+                0 0 25px rgba(255, 255, 255, 0.5),
+                0 0 15px rgba(138, 43, 226, 0.7);
         }
 
         .main-entrance-button:active {
@@ -189,7 +185,7 @@
 </head>
 <body>
 
-    <!-- Capas de fondo para efectos de luces -->
+    <!-- Capas de fondo para efectos de luces originales -->
     <div class="stars"></div>
     <div class="bg-glow glow-purple-1"></div>
     <div class="bg-glow glow-purple-2"></div>
@@ -197,18 +193,18 @@
 
     <div class="container">
         
-        <!-- Título principal -->
+        <!-- Título principal subido -->
         <h1 class="page-title">Anastasia Beyond</h1>
 
-        <!-- Rayo / Destello luminoso debajo del nombre -->
+        <!-- Rayo de luz en medio -->
         <div class="beam"></div>
 
-        <!-- Foto principal (MANTIENE DIMENSIONES Y CONTENIDO ORIGINAL) -->
+        <!-- Foto principal -->
         <div class="header-banner">
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Botón de acceso: Con iluminación intensa corregida -->
+        <!-- Botón de acceso -->
         <a href="aboutme.html" class="main-entrance-button">
             My Links
         </a>
