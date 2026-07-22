@@ -14,7 +14,6 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #000000;
             color: #d8baff;
             line-height: 1.4;
             display: flex;
@@ -23,22 +22,111 @@
             min-height: 100vh;
             padding-top: 20px;
             padding-bottom: 40px;
+            overflow-x: hidden;
+            position: relative;
+
+            /* FONDO DEGRADADO COPIADO DE INDEX.HTML */
+            background: #000000;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(30, 10, 40, 0.7) 0%, rgba(0, 0, 0, 1) 100%),
+                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgAInAzMAAVMDIABVjYAAA7gYFAm7v0X0AAAAASUVORK5CYII=');
+            background-size: cover, auto;
+            background-repeat: no-repeat, repeat;
+        }
+
+        /* EFECTO DE ESTRELLAS/LUCES EN EL FONDO (IDÉNTICO A INDEX.HTML) */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 
+                /* --- LADO IZQUIERDO (0vw a 50vw) --- */
+                2vw 15vh #fff, 5vw 85vh 1px #fff, 10vw 35vh #fff,
+                15vw 60vh 2px #fff, 20vw 20vh #fff, 25vw 90vh 1px #fff,
+                30vw 40vh #fff, 35vw 75vh 2px #fff, 40vw 15vh 1px #fff,
+                45vw 50vh #fff, 8vw 95vh 2px #fff, 18vw 10vh 1px #fff,
+                28vw 65vh #fff, 38vw 30vh 2px #fff, 48vw 80vh 1px #fff,
+                                
+                /* --- LADO DERECHO (50vw a 100vw) --- */
+                52vw 85vh #fff, 58vw 20vh 1px #fff, 62vw 65vh #fff,
+                68vw 10vh 2px #fff, 75vw 90vh #fff, 80vw 35vh 1px #fff,
+                85vw 70vh #fff, 90vw 15vh 2px #fff, 95vw 80vh 1px #fff,
+                55vw 45vh #fff, 70vw 25vh 1px #fff, 88vw 50vh 2px #fff;
+            animation: animateStars 20s linear infinite;
+            opacity: 0.85;
+            z-index: 0;
+        }
+
+        .stars::after {
+            content: " ";
+            position: absolute;
+            top: 500px;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: inherit;
+        }
+
+        @keyframes animateStars {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-500px); }
+        }
+
+        /* LUCES PÚRPURAS/DORADAS DE FONDO (IDÉNTICAS A INDEX.HTML) */
+        .bg-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-purple-1 {
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.4) 0%, rgba(138, 43, 226, 0) 70%);
+            top: 30%;
+            left: 10%;
+        }
+        .glow-purple-2 {
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.3) 0%, rgba(138, 43, 226, 0) 70%);
+            bottom: 10%;
+            right: 20%;
+        }
+        .glow-gold-1 {
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0) 70%);
+            top: 60%;
+            right: 15%;
         }
 
         .container {
             width: 100%;
             max-width: 480px;
             position: relative;
+            z-index: 2;
         }
 
-        /* MISMO TÍTULO HOMOGÉNEO EN LA PARTE SUPERIOR */
+        /* TÍTULO PRINCIPAL HOMOGÉNEO CON LUZ PÚRPURA */
         .page-title {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 0;
             letter-spacing: -0.5px;
             text-align: center;
             width: 100%;
+            color: #d8baff;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+        }
+
+        /* RAYO DE LUZ DEBAJO DEL TÍTULO */
+        .beam {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(138, 43, 226, 0) 0%, rgba(138, 43, 226, 1) 50%, rgba(138, 43, 226, 0) 100%);
+            margin-top: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 15px 3px rgba(138, 43, 226, 0.8);
         }
 
         .social-icons-row {
@@ -109,7 +197,7 @@
             backdrop-filter: blur(5px);
         }
 
-        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER (IDÉNTICO Y PERFECTO) */
+        /* TEXTO CON BORDE EXTERIOR ESTILO STICKER */
         .card-text {
             color: #ffffff;
             font-size: 20px;
@@ -130,7 +218,7 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* BARRAS NEGRAS CON HALO BLANCO */
+        /* BARRAS NEGRAS CON BORDE PÚRPURA Y RESPLANDOR */
         .long-button {
             width: 100%;
             height: 56px;
@@ -144,13 +232,19 @@
             font-weight: 500;
             font-size: 15px;
             position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 18px rgba(255, 255, 255, 0.4); 
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            border: 2px solid #8e5bd9;
+            box-shadow: 
+                0 0 25px rgba(255, 255, 255, 0.5),
+                0 0 15px rgba(138, 43, 226, 0.7); 
         }
 
         .long-button:active {
             transform: scale(0.98);
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                0 0 15px rgba(255, 255, 255, 0.3),
+                0 0 8px rgba(138, 43, 226, 0.5);
+            border-color: #d8baff;
         }
 
         .btn-icon-circle {
@@ -189,10 +283,19 @@
 </head>
 <body>
 
+    <!-- CAPAS DE FONDO Y LUCES -->
+    <div class="stars"></div>
+    <div class="bg-glow glow-purple-1"></div>
+    <div class="bg-glow glow-purple-2"></div>
+    <div class="bg-glow glow-gold-1"></div>
+
     <div class="container">
 
         <!-- Título idéntico en la parte superior -->
         <h1 class="page-title">Anastasia Beyond</h1>
+
+        <!-- Rayo de luz en medio -->
+        <div class="beam"></div>
 
         <!-- Fila de Logos independientes con enlaces correctos -->
         <div class="social-icons-row">
@@ -223,13 +326,13 @@
                 <span class="btn-label">Instagram</span>
             </a>
 
-            <!-- Botón: TikTok (Enlace corregido) -->
+            <!-- Botón: TikTok -->
             <a href="https://www.tiktok.com/@anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-tiktok"><i class="fa-brands fa-tiktok"></i></div>
                 <span class="btn-label">TikTok</span>
             </a>
 
-            <!-- Botón: X (Enlace corregido) -->
+            <!-- Botón: X -->
             <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="long-button">
                 <div class="btn-icon-circle btn-ic-x"><i class="fa-brands fa-x-twitter"></i></div>
                 <span class="btn-label">X</span>
