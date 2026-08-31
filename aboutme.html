@@ -25,7 +25,7 @@
             overflow-x: hidden;
             position: relative;
 
-            /* FONDO DEGRADADO */
+            /* FONDO DEGRADADO COPIADO DE INDEX.HTML */
             background: #000000;
             background-image: 
                 radial-gradient(circle at 50% 50%, rgba(30, 10, 40, 0.7) 0%, rgba(0, 0, 0, 1) 100%),
@@ -43,11 +43,14 @@
             height: 2px;
             background: transparent;
             box-shadow: 
+                /* --- LADO IZQUIERDO (0vw a 50vw) --- */
                 2vw 15vh #fff, 5vw 85vh 1px #fff, 10vw 35vh #fff,
                 15vw 60vh 2px #fff, 20vw 20vh #fff, 25vw 90vh 1px #fff,
                 30vw 40vh #fff, 35vw 75vh 2px #fff, 40vw 15vh 1px #fff,
                 45vw 50vh #fff, 8vw 95vh 2px #fff, 18vw 10vh 1px #fff,
                 28vw 65vh #fff, 38vw 30vh 2px #fff, 48vw 80vh 1px #fff,
+                                
+                /* --- LADO DERECHO (50vw a 100vw) --- */
                 52vw 85vh #fff, 58vw 20vh 1px #fff, 62vw 65vh #fff,
                 68vw 10vh 2px #fff, 75vw 90vh #fff, 80vw 35vh 1px #fff,
                 85vw 70vh #fff, 90vw 15vh 2px #fff, 95vw 80vh 1px #fff,
@@ -104,6 +107,7 @@
             z-index: 2;
         }
 
+        /* TÍTULO PRINCIPAL */
         .page-title {
             font-size: 32px;
             font-weight: 700;
@@ -115,6 +119,7 @@
             text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
 
+        /* RAYO DE LUZ */
         .beam {
             width: 100%;
             height: 2px;
@@ -161,6 +166,7 @@
             height: 220px;
             border-radius: 20px;
             position: relative;
+            overflow: visible; /* Permitir que la insignia sobresalga si es necesario */
             background-size: cover;
             background-position: center;
             text-decoration: none;
@@ -175,6 +181,7 @@
             transform: scale(0.98);
         }
 
+        /* INSIGNIA SUPERIOR IZQUIERDA */
         .card-badge {
             position: absolute;
             top: 15px;
@@ -186,11 +193,12 @@
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            z-index: 2;
+            z-index: 5;
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(5px);
         }
 
+        /* TEXTO DE LA TARJETA */
         .card-text {
             color: #ffffff;
             font-size: 20px;
@@ -211,21 +219,22 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* --- EMBLEMA DE PROMOCIÓN UBICADO A LA DERECHA Y OPTIMIZADO --- */
+        /* AVISO DE DESCUENTO SOBREPUESTO */
         .promo-badge-large {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            right: -10px;
+            top: -15px;
             z-index: 10;
             display: flex;
             flex-direction: column;
             align-items: center;
             transform: rotate(4deg);
             animation: pulseGlow 2.5s infinite alternate;
+            pointer-events: none;
         }
 
         .badge-main-box {
-            background: rgba(10, 5, 18, 0.85);
+            background: rgba(10, 5, 18, 0.88);
             backdrop-filter: blur(8px);
             border: 2px solid #ffffff;
             box-shadow: 
@@ -233,7 +242,7 @@
                 0 0 25px rgba(138, 43, 226, 0.8),
                 inset 0 0 15px rgba(138, 43, 226, 0.4);
             border-radius: 18px;
-            padding: 10px 18px;
+            padding: 8px 16px;
             text-align: center;
             position: relative;
             z-index: 2;
@@ -250,9 +259,9 @@
 
         .promo-title-tag {
             color: #d8baff;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             text-shadow: 0 0 8px rgba(138, 43, 226, 0.8);
             margin-bottom: 2px;
@@ -260,7 +269,7 @@
 
         .promo-big-percent {
             color: #ffffff;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 900;
             line-height: 0.95;
             letter-spacing: -1px;
@@ -271,21 +280,20 @@
         }
 
         .promo-big-percent span {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 800;
         }
 
-        /* ETIQUETA INFERIOR BAJADA MÁS PARA EVITAR TAPAR CON EL REFLEJO */
         .badge-ribbon-sub {
             background: linear-gradient(90deg, #8e5bd9 0%, #ffffff 50%, #8e5bd9 100%);
             color: #000000;
             font-weight: 900;
-            font-size: 10.5px;
-            letter-spacing: 0.6px;
+            font-size: 10px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            padding: 5px 14px;
+            padding: 4px 12px;
             border-radius: 20px;
-            margin-top: 4px; /* Aumentado espacio para separarlo del reflejo */
+            margin-top: 4px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
             white-space: nowrap;
             z-index: 3;
@@ -303,6 +311,7 @@
             }
         }
 
+        /* BOTONES LARGOS */
         .long-button {
             width: 100%;
             height: 56px;
@@ -341,9 +350,20 @@
             color: white;
         }
 
-        .btn-ic-instagram { background: #000000; font-size: 22px; }
-        .btn-ic-tiktok { background: #000000; font-size: 18px; }
-        .btn-ic-x { background: #000000; font-size: 18px; }
+        .btn-ic-instagram { 
+            background: #000000; 
+            font-size: 22px; 
+        }
+        
+        .btn-ic-tiktok { 
+            background: #000000; 
+            font-size: 18px;
+        }
+        
+        .btn-ic-x { 
+            background: #000000; 
+            font-size: 18px;
+        }
 
         .btn-label {
             position: absolute;
@@ -364,9 +384,13 @@
 
     <div class="container">
 
+        <!-- Título -->
         <h1 class="page-title">Anastasia Beyond</h1>
+
+        <!-- Rayo de luz -->
         <div class="beam"></div>
 
+        <!-- Fila de iconos -->
         <div class="social-icons-row">
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://instagram.com/anastasiabeyond1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-instagram"></i></a>
@@ -374,6 +398,7 @@
             <a href="https://x.com/anastasiabey1" target="_blank" rel="noopener noreferrer" class="icon-flat"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
 
+        <!-- Enlaces -->
         <div class="content-links">
             
             <!-- Tarjeta 1: YouTube -->
@@ -382,10 +407,12 @@
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
-            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2'); overflow: visible;">
-                
-                <!-- INSIGNIA UBICADA A LA DERECHA CON TEXTO BAJADO Y BORDES DEFINIDOS -->
+            <!-- Tarjeta 2: Exclusive Content (Con el logo de enlace a la izquierda y el aviso de descuento a la derecha) -->
+            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
+                <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
+                <div class="card-text">Exclusive Content</div>
+
+                <!-- AVISO DE DESCUENTO SOBREPUESTO -->
                 <div class="promo-badge-large">
                     <div class="badge-main-box">
                         <div class="promo-title-tag">Labor Day Special</div>
@@ -393,8 +420,6 @@
                     </div>
                     <div class="badge-ribbon-sub">Starts Fri, Sept 4th</div>
                 </div>
-
-                <div class="card-text">Exclusive Content</div>
             </a>
 
             <!-- Botón: Instagram -->
