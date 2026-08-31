@@ -166,7 +166,7 @@
             height: 220px;
             border-radius: 20px;
             position: relative;
-            overflow: visible; /* Permitir que la insignia sobresalga si es necesario */
+            overflow: hidden; /* Recorta los elementos al borde de la tarjeta */
             background-size: cover;
             background-position: center;
             text-decoration: none;
@@ -219,17 +219,15 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* AVISO DE DESCUENTO SOBREPUESTO */
+        /* AVISO DE DESCUENTO ADENTRO A LA DERECHA */
         .promo-badge-large {
             position: absolute;
-            right: -10px;
-            top: -15px;
+            right: 15px;
+            top: 15px;
             z-index: 10;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transform: rotate(4deg);
-            animation: pulseGlow 2.5s infinite alternate;
             pointer-events: none;
         }
 
@@ -298,17 +296,6 @@
             white-space: nowrap;
             z-index: 3;
             border: 1px solid #ffffff;
-        }
-
-        @keyframes pulseGlow {
-            from {
-                transform: rotate(4deg) scale(1);
-                filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.6));
-            }
-            to {
-                transform: rotate(4deg) scale(1.04);
-                filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
-            }
         }
 
         /* BOTONES LARGOS */
@@ -407,12 +394,12 @@
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: Exclusive Content (Con el logo de enlace a la izquierda y el aviso de descuento a la derecha) -->
+            <!-- Tarjeta 2: Exclusive Content (Icono enlace a la izquierda, aviso dentro a la derecha) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
                 <div class="card-text">Exclusive Content</div>
 
-                <!-- AVISO DE DESCUENTO SOBREPUESTO -->
+                <!-- AVISO DE DESCUENTO DENTRO -->
                 <div class="promo-badge-large">
                     <div class="badge-main-box">
                         <div class="promo-title-tag">Labor Day Special</div>
