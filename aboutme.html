@@ -219,20 +219,21 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* AVISO DE DESCUENTO ADENTRO A LA DERECHA */
+/* --- EMBLEMA DE PROMOCIÓN UBICADO A LA DERECHA Y OPTIMIZADO --- */
         .promo-badge-large {
             position: absolute;
-            right: 15px;
             top: 15px;
+            right: 15px;
             z-index: 10;
             display: flex;
             flex-direction: column;
             align-items: center;
-            pointer-events: none;
+            transform: rotate(4deg);
+            animation: pulseGlow 2.5s infinite alternate;
         }
 
         .badge-main-box {
-            background: rgba(10, 5, 18, 0.88);
+            background: rgba(10, 5, 18, 0.85);
             backdrop-filter: blur(8px);
             border: 2px solid #ffffff;
             box-shadow: 
@@ -240,7 +241,7 @@
                 0 0 25px rgba(138, 43, 226, 0.8),
                 inset 0 0 15px rgba(138, 43, 226, 0.4);
             border-radius: 18px;
-            padding: 8px 16px;
+            padding: 10px 18px;
             text-align: center;
             position: relative;
             z-index: 2;
@@ -257,9 +258,9 @@
 
         .promo-title-tag {
             color: #d8baff;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 800;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             text-shadow: 0 0 8px rgba(138, 43, 226, 0.8);
             margin-bottom: 2px;
@@ -267,7 +268,7 @@
 
         .promo-big-percent {
             color: #ffffff;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 900;
             line-height: 0.95;
             letter-spacing: -1px;
@@ -278,27 +279,38 @@
         }
 
         .promo-big-percent span {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
         }
 
+        /* ETIQUETA INFERIOR BAJADA MÁS PARA EVITAR TAPAR CON EL REFLEJO */
         .badge-ribbon-sub {
             background: linear-gradient(90deg, #8e5bd9 0%, #ffffff 50%, #8e5bd9 100%);
             color: #000000;
             font-weight: 900;
-            font-size: 10px;
-            letter-spacing: 0.5px;
+            font-size: 10.5px;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            margin-top: 4px;
+            margin-top: 4px; /* Aumentado espacio para separarlo del reflejo */
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
             white-space: nowrap;
             z-index: 3;
             border: 1px solid #ffffff;
         }
 
-        /* BOTONES LARGOS */
+        @keyframes pulseGlow {
+            from {
+                transform: rotate(4deg) scale(1);
+                filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.6));
+            }
+            to {
+                transform: rotate(4deg) scale(1.04);
+                filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
+            }
+        }
+
         .long-button {
             width: 100%;
             height: 56px;
