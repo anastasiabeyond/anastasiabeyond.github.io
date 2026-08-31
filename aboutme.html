@@ -211,38 +211,38 @@
                  0px  3px 6px rgba(0,0,0,0.5);
         }
 
-        /* --- EMBLEMA DE PROMOCIÓN IMPONENTE Y LLAMATIVO --- */
+        /* --- EMBLEMA DE PROMOCIÓN UBICADO A LA DERECHA Y OPTIMIZADO --- */
         .promo-badge-large {
             position: absolute;
-            top: 18px;
-            left: 15px;
+            top: 15px;
+            right: 15px;
             z-index: 10;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transform: rotate(-4deg);
+            transform: rotate(4deg);
             animation: pulseGlow 2.5s infinite alternate;
         }
 
         .badge-main-box {
-            background: rgba(10, 5, 18, 0.82);
+            background: rgba(10, 5, 18, 0.85);
             backdrop-filter: blur(8px);
             border: 2px solid #ffffff;
             box-shadow: 
                 0 0 15px rgba(255, 255, 255, 0.8),
-                0 0 30px rgba(138, 43, 226, 0.8),
+                0 0 25px rgba(138, 43, 226, 0.8),
                 inset 0 0 15px rgba(138, 43, 226, 0.4);
             border-radius: 18px;
             padding: 10px 18px;
             text-align: center;
             position: relative;
+            z-index: 2;
         }
 
-        /* DESTELLES ALREDEDOR DEL EMBLEMA */
         .badge-main-box::before {
             content: '';
             position: absolute;
-            top: -6px; left: -6px; right: -6px; bottom: -6px;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
             border-radius: 22px;
             border: 1px dashed rgba(255, 255, 255, 0.5);
             pointer-events: none;
@@ -275,27 +275,30 @@
             font-weight: 800;
         }
 
+        /* ETIQUETA INFERIOR BAJADA MÁS PARA EVITAR TAPAR CON EL REFLEJO */
         .badge-ribbon-sub {
-            background: linear-gradient(90deg, #8e5bd9 0%, #d8baff 50%, #8e5bd9 100%);
+            background: linear-gradient(90deg, #8e5bd9 0%, #ffffff 50%, #8e5bd9 100%);
             color: #000000;
-            font-weight: 800;
-            font-size: 10px;
-            letter-spacing: 0.5px;
+            font-weight: 900;
+            font-size: 10.5px;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
-            margin-top: -8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            margin-top: 4px; /* Aumentado espacio para separarlo del reflejo */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
             white-space: nowrap;
+            z-index: 3;
+            border: 1px solid #ffffff;
         }
 
         @keyframes pulseGlow {
             from {
-                transform: rotate(-4deg) scale(1);
+                transform: rotate(4deg) scale(1);
                 filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.6));
             }
             to {
-                transform: rotate(-4deg) scale(1.04);
+                transform: rotate(4deg) scale(1.04);
                 filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
             }
         }
@@ -379,10 +382,10 @@
                 <div class="card-text">YouTube</div>
             </a>
 
-            <!-- Tarjeta 2: OnlyFans (Exclusive Content) CON EMBLEMA PROMO GRANDE Y LLAMATIVO -->
+            <!-- Tarjeta 2: OnlyFans (Exclusive Content) -->
             <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2'); overflow: visible;">
                 
-                <!-- INSIGNIA DESTACADA LABOR DAY -->
+                <!-- INSIGNIA UBICADA A LA DERECHA CON TEXTO BAJADO Y BORDES DEFINIDOS -->
                 <div class="promo-badge-large">
                     <div class="badge-main-box">
                         <div class="promo-title-tag">Labor Day Special</div>
