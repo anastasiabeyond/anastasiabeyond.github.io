@@ -197,16 +197,16 @@
             border-color: #d8baff;
         }
 
-        /* LOGO DE DESCUENTO SOBREPUESTO */
+        /* LOGO DE DESCUENTO REDUCIDO Y DESPLAZADO A LA DERECHA */
         .promo-badge-large {
             position: absolute;
-            right: 0px;
-            top: -24px;
+            right: 5px; /* Movido más a la derecha para no obstruir el centro */
+            top: -20px;
             z-index: 10;
             display: flex;
             flex-direction: column;
             align-items: center;
-            transform: rotate(4deg);
+            transform: rotate(4deg) scale(0.85); /* Reducido al 85% de su tamaño */
             animation: pulseGlow 2.5s infinite alternate;
             pointer-events: none;
         }
@@ -219,8 +219,8 @@
                 0 0 15px rgba(255, 255, 255, 0.8),
                 0 0 25px rgba(138, 43, 226, 0.8),
                 inset 0 0 15px rgba(138, 43, 226, 0.4);
-            border-radius: 18px;
-            padding: 8px 16px;
+            border-radius: 16px;
+            padding: 6px 12px;
             text-align: center;
             position: relative;
             z-index: 2;
@@ -229,17 +229,17 @@
         .badge-main-box::before {
             content: '';
             position: absolute;
-            top: -5px; left: -5px; right: -5px; bottom: -5px;
-            border-radius: 22px;
+            top: -4px; left: -4px; right: -4px; bottom: -4px;
+            border-radius: 20px;
             border: 1px dashed rgba(255, 255, 255, 0.5);
             pointer-events: none;
         }
 
         .promo-title-tag {
             color: #d8baff;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 800;
-            letter-spacing: 1.2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             text-shadow: 0 0 8px rgba(138, 43, 226, 0.8);
             margin-bottom: 2px;
@@ -247,7 +247,7 @@
 
         .promo-big-percent {
             color: #ffffff;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 900;
             line-height: 0.95;
             letter-spacing: -1px;
@@ -258,7 +258,7 @@
         }
 
         .promo-big-percent span {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 800;
         }
 
@@ -266,12 +266,12 @@
             background: linear-gradient(90deg, #8e5bd9 0%, #ffffff 50%, #8e5bd9 100%);
             color: #000000;
             font-weight: 900;
-            font-size: 10px;
+            font-size: 9px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 20px;
-            margin-top: 4px;
+            margin-top: 3px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
             white-space: nowrap;
             z-index: 3;
@@ -280,11 +280,11 @@
 
         @keyframes pulseGlow {
             from {
-                transform: rotate(4deg) scale(1);
+                transform: rotate(4deg) scale(0.85);
                 filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.6));
             }
             to {
-                transform: rotate(4deg) scale(1.04);
+                transform: rotate(4deg) scale(0.89);
                 filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
             }
         }
@@ -311,13 +311,13 @@
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Botón de acceso con el aviso sobrepuesto -->
+        <!-- Botón de acceso con el aviso sobrepuesto ajustado -->
         <div class="btn-wrapper">
             <a href="aboutme.html" class="main-entrance-button">
                 My Links
             </a>
 
-            <!-- AVISO IGUAL AL DE ABOUT ME -->
+            <!-- AVISO REDUCIDO Y MOVIDO LIGERAMENTE A LA DERECHA -->
             <div class="promo-badge-large">
                 <div class="badge-main-box">
                     <div class="promo-title-tag">Labor Day Special</div>
