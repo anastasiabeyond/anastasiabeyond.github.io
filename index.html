@@ -29,12 +29,12 @@
             background: #000000;
             background-image: 
                 radial-gradient(circle at 50% 50%, rgba(30, 10, 40, 0.7) 0%, rgba(0, 0, 0, 1) 100%),
-                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgAInAzMAAVMDIABVjYAAA7gYFAm7v0X0AAAAASUVORTH5CYII=');
+                url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgAInAzMAAVMDIABVjYAAA7gYFAm7v0X0AAAAASUVORK5CYII=');
             background-size: cover, auto;
             background-repeat: no-repeat, repeat;
         }
 
-        /* EFECTO DE ESTRELLAS/LUCES EN EL FONDO */
+        /* EFECTO DE ESTRELLAS/LUCES EN EL FONDO (MANTENIDO IGUAL) */
         .stars {
             position: absolute;
             top: 0;
@@ -67,6 +67,7 @@
             height: 2px;
             background: transparent;
             box-shadow: inherit;
+                
         }
 
         @keyframes animateStars {
@@ -74,7 +75,7 @@
             to { transform: translateY(-500px); }
         }
 
-        /* LUCES PÚRPURAS/DORADAS DE FONDO */
+        /* LUCES PÚRPURAS/DORADAS DE FONDO (MANTENIDAS IGUAL) */
         .bg-glow {
             position: absolute;
             width: 300px;
@@ -109,24 +110,24 @@
             position: relative;
         }
 
-        /* TÍTULO PRINCIPAL */
+        /* TÍTULO PRINCIPAL: SUBIDO UN POCO PARA DAR MÁS ESPACIO */
         .page-title {
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            margin-top: -30px;
+            margin-top: -30px; /* Sube el título para que no se vea apretado */
             margin-bottom: 0;
             color: #d8baff;
             text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
         }
 
-        /* RAYO DE LUZ */
+        /* RAYO DE LUZ: MOVIDO JUSTO AL MEDIO ENTRE EL TÍTULO Y LA FOTO */
         .beam {
             width: 100%;
             height: 2px;
             background: linear-gradient(90deg, rgba(138, 43, 226, 0) 0%, rgba(138, 43, 226, 1) 50%, rgba(138, 43, 226, 0) 100%);
-            margin-top: 20px;
-            margin-bottom: 35px;
+            margin-top: 20px; /* Espacio desde el título */
+            margin-bottom: 35px; /* Espacio hacia la foto principal */
             box-shadow: 0 0 15px 3px rgba(138, 43, 226, 0.8);
         }
 
@@ -158,17 +159,7 @@
             z-index: 2;
         }
 
-        /* CONTENEDOR PARA EL BOTÓN Y EL AVISO SOBREPUESTO */
-        .btn-wrapper {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        /* BOTÓN DE ENTRADA ORIGINAL */
+        /* BOTÓN DE ENTRADA (INTACTO) */
         .main-entrance-button {
             display: inline-flex;
             align-items: center;
@@ -183,6 +174,8 @@
             font-size: 17px;
             letter-spacing: 0.5px;
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            margin-top: 30px;
+            margin-bottom: 20px; 
             border: 2px solid #8e5bd9;
             box-shadow: 
                 0 0 25px rgba(255, 255, 255, 0.5),
@@ -195,98 +188,6 @@
                 0 0 15px rgba(255, 255, 255, 0.3),
                 0 0 8px rgba(138, 43, 226, 0.5);
             border-color: #d8baff;
-        }
-
-        /* LOGO DE DESCUENTO REDUCIDO Y DESPLAZADO A LA DERECHA */
-        .promo-badge-large {
-            position: absolute;
-            right: 5px; /* Movido más a la derecha para no obstruir el centro */
-            top: -20px;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: rotate(4deg) scale(0.85); /* Reducido al 85% de su tamaño */
-            animation: pulseGlow 2.5s infinite alternate;
-            pointer-events: none;
-        }
-
-        .badge-main-box {
-            background: rgba(10, 5, 18, 0.88);
-            backdrop-filter: blur(8px);
-            border: 2px solid #ffffff;
-            box-shadow: 
-                0 0 15px rgba(255, 255, 255, 0.8),
-                0 0 25px rgba(138, 43, 226, 0.8),
-                inset 0 0 15px rgba(138, 43, 226, 0.4);
-            border-radius: 16px;
-            padding: 6px 12px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .badge-main-box::before {
-            content: '';
-            position: absolute;
-            top: -4px; left: -4px; right: -4px; bottom: -4px;
-            border-radius: 20px;
-            border: 1px dashed rgba(255, 255, 255, 0.5);
-            pointer-events: none;
-        }
-
-        .promo-title-tag {
-            color: #d8baff;
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-shadow: 0 0 8px rgba(138, 43, 226, 0.8);
-            margin-bottom: 2px;
-        }
-
-        .promo-big-percent {
-            color: #ffffff;
-            font-size: 24px;
-            font-weight: 900;
-            line-height: 0.95;
-            letter-spacing: -1px;
-            text-shadow: 
-                0 0 12px rgba(255, 255, 255, 0.9),
-                0 0 20px rgba(138, 43, 226, 0.9),
-                2px 2px 0 #000;
-        }
-
-        .promo-big-percent span {
-            font-size: 17px;
-            font-weight: 800;
-        }
-
-        .badge-ribbon-sub {
-            background: linear-gradient(90deg, #8e5bd9 0%, #ffffff 50%, #8e5bd9 100%);
-            color: #000000;
-            font-weight: 900;
-            font-size: 9px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-top: 3px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
-            white-space: nowrap;
-            z-index: 3;
-            border: 1px solid #ffffff;
-        }
-
-        @keyframes pulseGlow {
-            from {
-                transform: rotate(4deg) scale(0.85);
-                filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.6));
-            }
-            to {
-                transform: rotate(4deg) scale(0.89);
-                filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
-            }
         }
     </style>
 </head>
@@ -311,21 +212,10 @@
             <div class="profile-bio-inside">Beyond imagination</div>
         </div>
 
-        <!-- Botón de acceso con el aviso sobrepuesto ajustado -->
-        <div class="btn-wrapper">
-            <a href="aboutme.html" class="main-entrance-button">
-                My Links
-            </a>
-
-            <!-- AVISO REDUCIDO Y MOVIDO LIGERAMENTE A LA DERECHA -->
-            <div class="promo-badge-large">
-                <div class="badge-main-box">
-                    <div class="promo-title-tag">Labor Day Special</div>
-                    <div class="promo-big-percent">30% <span>OFF</span></div>
-                </div>
-                <div class="badge-ribbon-sub">Ends Mon, Sept 7th</div>
-            </div>
-        </div>
+        <!-- Botón de acceso -->
+        <a href="aboutme.html" class="main-entrance-button">
+            My Links
+        </a>
 
     </div>
 
