@@ -177,6 +177,30 @@
             transition: transform 0.2s;
         }
 
+        /* EFECTO DE MOVIMIENTO SUAVE DE LLAMADA DE ATENCIÓN */
+        .attention-card {
+            animation: pulseAttention 3s infinite ease-in-out;
+        }
+
+        @keyframes pulseAttention {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            }
+            15% {
+                transform: scale(1.02) rotate(-1deg);
+                box-shadow: 0 6px 25px rgba(138, 43, 226, 0.6);
+            }
+            30% {
+                transform: scale(1.02) rotate(1deg);
+                box-shadow: 0 6px 25px rgba(138, 43, 226, 0.6);
+            }
+            45% {
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            }
+        }
+
         .image-card:active {
             transform: scale(0.98);
         }
@@ -312,13 +336,13 @@
         <!-- Enlaces -->
         <div class="content-links">
             
-            <!-- Tarjeta: OnlyFans (Exclusive Content) -->
-            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card" style="background-image: url('exclusive_card.jpeg?v=2');">
+            <!-- Tarjeta: OnlyFans (Exclusive Content) Con Animación Suave -->
+            <a href="https://onlyfans.com/anastasiabeyond" target="_blank" rel="noopener noreferrer" class="image-card attention-card" style="background-image: url('exclusive_card.jpeg?v=2');">
                 <div class="card-badge" style="color: #ffffff;"><i class="fa-solid fa-link"></i></div>
                 <div class="card-text">Exclusive Content</div>
             </a>
 
-            <!-- Botón: YouTube (con margen superior incrementado) -->
+            <!-- Botón: YouTube -->
             <a href="https://youtube.com/@AnastasiaBeyondTV" target="_blank" rel="noopener noreferrer" class="long-button button-top-gap">
                 <div class="btn-icon-circle btn-ic-youtube"><i class="fa-brands fa-youtube"></i></div>
                 <span class="btn-label">YouTube</span>
